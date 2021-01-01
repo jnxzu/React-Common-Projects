@@ -1,0 +1,17 @@
+.notfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-weight: 300;
+    font-size: xx-large;
+  }
+
+  h3 {
+    font-weight: 300;
+    font-size: medium;
+    opacity: 0.8;
+  }
+}
