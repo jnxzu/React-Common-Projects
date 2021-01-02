@@ -19,6 +19,7 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
-    "quotes": ["error", "single"]
+    "quotes": ["error", "single"],
+    "no-unused-vars": "warn"
   }
 }
