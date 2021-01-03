@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap');
+
+$bg: #eae7dc;
+$accent1: #e85a4f;
+$accent2: #8e8d8a;
+
+.weather {
+  background: $bg;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Dosis', sans-serif;
+
+  &__container {
+    height: 400px;
+    width: 500px;
+
+    &__display {
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        color: $accent1;
+        font-size: 128px;
+        font-weight: 200;
+        span {
+          font-size: 48px;
+        }
+      }
+
+      h3 {
+        opacity: 0.75;
+      }
+
+      h2 {
+        color: $accent2;
+      }
+    }
+    &__search {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+
+      input {
+        width: 300px;
+        height: 32px;
+        padding: 6px;
+        border: none;
+        transition: all 0.25s ease-out;
+
+        &:focus {
+          transform: scale(1.1);
+          outline: none;
+        }
+      }
+    }
+    &__suggestions {
+      margin-top: 16px;
+      max-height: 150px;
+      display: flex;
+      flex-wrap: wrap;
+
+      &__location {
+        background: rgba($accent2, 0);
+        color: $accent1;
+        padding: 5px 10px;
+        margin: 10px 5px;
+        cursor: pointer;
+        transition: all 0.25s ease-out;
+        border-radius: 5px;
+
+        &:hover {
+          background: rgba($accent2, 0.1);
+        }
+      }
+    }
+  }
+}
