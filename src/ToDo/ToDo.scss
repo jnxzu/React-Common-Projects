@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
+$content: #edf5e1;
+$accent: #05386b;
+$bg: #5cdb95;
+
+.todo {
+  background: $bg;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Quicksand', sans-serif;
+
+  &__container {
+    width: 500px;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+
+    &__new {
+      height: 48px;
+      background: $content;
+      border-radius: 5px;
+      margin-bottom: 7px;
+
+      form {
+        height: 100%;
+        display: flex;
+        padding: 5px;
+
+        input {
+          height: 100%;
+          border: none;
+
+          &[type='text'] {
+            flex-grow: 1;
+            background: $content;
+            padding-left: 10px;
+            font-size: larger;
+            transition: all 0.25s ease-out;
+            transform: scale(0.9);
+
+            &:focus {
+              transform: scale(0.95);
+            }
+          }
+
+          &[type='submit'] {
+            width: 80px;
+            border-radius: 5px;
+            background: $accent;
+            font-weight: 800;
+            cursor: pointer;
+            color: $content;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    &__list {
+      &__task {
+        background: $content;
+        height: 48px;
+        margin: 8px;
+        border-radius: 5px;
+
+        display: flex;
+        align-items: center;
+        input {
+          margin: 15px;
+          transform: scale(1.25);
+          transition: all 0.25s ease-out;
+
+          &:checked {
+            transform: scale(1);
+          }
+        }
+
+        h2 {
+          flex-grow: 1;
+          transition: all 0.25s ease-out;
+        }
+
+        &.completed {
+          h2 {
+            opacity: 0.5;
+            text-decoration: line-through;
+            transform-origin: left center;
+            transform: scale(0.9);
+          }
+        }
+
+        button {
+          margin: 10px;
+          border: none;
+          background: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.task-enter {
+  opacity: 0;
+}
+.task-enter-active {
+  opacity: 1;
+  transition: opacity 0.25s ease-out;
+}
+.task-exit {
+  opacity: 1;
+}
+.task-exit-active {
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
