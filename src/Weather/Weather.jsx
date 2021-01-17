@@ -62,7 +62,7 @@ function Weather() {
             weather.loc && (
               <>
                 <h1>
-                  {round(weather.temp, 1)}
+                  {round(weather.temp, 0)}
                   <span>°C</span>
                 </h1>
                 <h3>{weather.weather}</h3>

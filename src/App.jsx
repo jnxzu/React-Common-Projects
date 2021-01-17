@@ -5,6 +5,7 @@ import NotFound from './NotFound';
 
 import ToDo from './ToDo/ToDo';
 import Weather from './Weather/Weather';
+import Notes from './Notes/Notes';
 
 import './App.scss';
 
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/">
             <ToDo />
             <Weather />
+            <Notes />
           </Route>
           <Route path="*">
             <NotFound />
