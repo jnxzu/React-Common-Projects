@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$bg: #c58d38;
+$borders: #6a472d;
+$darker: #303b36;
+$lighter: #bac4be;
+
+.quiz {
+  font-family: 'Open Sans', sans-serif;
+  background: $bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__question {
+    margin-top: -90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__category {
+      margin-bottom: -25px;
+    }
+
+    &__text {
+      margin: 25px;
+      padding: 5px 15px;
+      border-radius: 15px;
+    }
+
+    &__answer {
+      width: 400px;
+      background: $lighter;
+      margin-bottom: 25px;
+      padding: 10px 20px;
+      border: 3px solid $borders;
+      border-radius: 15px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.25s ease-out;
+
+      &:hover {
+        background: $darker;
+        color: $lighter;
+        transform: scale(1.05);
+      }
+
+      &.correct.answered {
+        background: lightgreen;
+        color: $darker;
+        transform: scale(1.1);
+      }
+
+      &.wrong.answered {
+        background: lightcoral;
+        color: $darker;
+        transform: scale(1);
+      }
+    }
+  }
+}

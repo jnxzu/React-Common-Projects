@@ -51,7 +51,10 @@ function Notes() {
       </div>
       <div className="notes__container">
         {notes.map((note) => (
-          <div className={`note ${note.editing ? 'editing' : ''}`}>
+          <div
+            key={note.id}
+            className={`note ${note.editing ? 'editing' : ''}`}
+          >
             <div className="note__top">
               <h3 onClick={() => toggleEditing(note.id)}>✏️</h3>
               <h3 className="note__top__date">

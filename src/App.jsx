@@ -6,6 +6,7 @@ import NotFound from './NotFound';
 import ToDo from './ToDo/ToDo';
 import Weather from './Weather/Weather';
 import Notes from './Notes/Notes';
+import Quiz from './Quiz/Quiz';
 
 import './App.scss';
 
@@ -19,6 +20,7 @@ function App() {
             <ToDo />
             <Weather />
             <Notes />
+            <Quiz />
           </Route>
           <Route path="*">
             <NotFound />
