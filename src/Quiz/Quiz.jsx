@@ -50,7 +50,7 @@ function Quiz() {
 
   return (
     <div id="quiz" className="quiz">
-      {!loading && (
+      {!loading ? (
         <FadeIn className="quiz__question" visible={!loading}>
           <h3 className="quiz__question__category">{question.category}</h3>
           <h1 className="quiz__question__text">{question.question}</h1>
@@ -65,6 +65,8 @@ function Quiz() {
             </div>
           ))}
         </FadeIn>
+      ) : (
+        <img src="quiz_loading.gif" alt="loading..." />
       )}
     </div>
   );
