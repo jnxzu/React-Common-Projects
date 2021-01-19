@@ -8,7 +8,7 @@ import './Weather.scss';
 
 function Weather() {
   const API =
-    'https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location';
+    'https://thawing-peak-99201.herokuapp.com/https://www.metaweather.com/api/location';
 
   const [suggestions, setSuggestions] = useState([
     { title: 'London', woeid: 44418 },

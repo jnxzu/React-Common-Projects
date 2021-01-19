@@ -5,7 +5,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Countdown.scss';
 
 function Countdown() {
-  const inputRef = useRef(null);
+  const dateRef = useRef(null);
+  const timeRef = useRef(null);
 
   const [buttonText, setButtonText] = useState('ok');
   const [showCountdown, setShowCountdown] = useState(false);
@@ -60,13 +61,16 @@ function Countdown() {
           <div className="countdown__center__input">
             <input
               type="date"
-              ref={inputRef}
+              ref={dateRef}
               min={moment().add(1, 'd').format('YYYY-MM-DD')}
             />
+            <input type="time" ref={timeRef} />
             <button
               type="submit"
               onClick={() => {
-                setTargetDate(moment(inputRef.current.value));
+                setTargetDate(
+                  moment(`${dateRef.current.value} ${timeRef.current.value}`)
+                );
                 setButtonText('one second...');
                 setTimeout(() => {
                   setShowCountdown(true);
