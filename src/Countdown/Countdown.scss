@@ -75,24 +75,6 @@ $accent: #ee6d6d;
           padding: 0 15px;
         }
       }
-
-      span {
-        position: absolute;
-        bottom: 3px;
-        right: 3px;
-        font-size: xx-small;
-        opacity: 0.25;
-        transition: all 0.25s ease-out;
-
-        a {
-          text-decoration: none;
-          color: $accent;
-        }
-
-        &:hover {
-          opacity: 0.75;
-        }
-      }
     }
   }
 }

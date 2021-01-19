@@ -79,12 +79,6 @@ function Countdown() {
             >
               {buttonText}
             </button>
-            <span>
-              only date because mozilla cant support what&#39;s in{' '}
-              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local">
-                their own docs
-              </a>
-            </span>
           </div>
         )}
       </div>
