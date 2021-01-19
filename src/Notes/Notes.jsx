@@ -64,9 +64,10 @@ function Notes() {
             </div>
             {note.editing ? (
               <div className="note__editing">
-                <textarea onChange={(e) => contentChange(e, note.id)}>
-                  {note.content}
-                </textarea>
+                <textarea
+                  onChange={(e) => contentChange(e, note.id)}
+                  value={note.content}
+                />
               </div>
             ) : (
               <div

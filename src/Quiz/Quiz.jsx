@@ -18,9 +18,9 @@ function Quiz() {
         if (
           res.data.results[0].category.includes('&') ||
           res.data.results[0].question.includes('&')
-        )
+        ) {
           newQuestion();
-        else {
+        } else {
           setQuestion({
             ...res.data.results[0],
             answers: _.shuffle([
@@ -56,6 +56,7 @@ function Quiz() {
           <h1 className="quiz__question__text">{question.question}</h1>
           {question.answers.map((ans) => (
             <div
+              key={ans}
               className={`quiz__question__answer ${
                 ans === question.correct_answer ? 'correct' : 'wrong'
               } ${answered ? 'answered' : ''}`}

@@ -71,6 +71,7 @@ $editing: #d0f5bc;
   }
 
   &__editing {
+    flex-grow: 1;
     padding: 10px;
 
     textarea {
