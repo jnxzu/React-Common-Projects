@@ -28,5 +28,9 @@
     &:active {
       transform: scale(1.1);
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
