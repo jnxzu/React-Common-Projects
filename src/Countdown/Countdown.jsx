@@ -21,7 +21,7 @@ function Countdown() {
       const minutes = duration.minutes();
       const seconds = duration.seconds();
 
-      if (days || hours || minutes || seconds) {
+      if (days > 0 || hours > 0 || minutes > 0 || seconds > 0) {
         setTimeLeft({
           days,
           hours,
@@ -29,6 +29,7 @@ function Countdown() {
           seconds,
         });
       } else {
+        setTargetDate(null);
         setShowCountdown(false);
       }
     }
@@ -62,7 +63,7 @@ function Countdown() {
             <input
               type="date"
               ref={dateRef}
-              min={moment().add(1, 'd').format('YYYY-MM-DD')}
+              min={moment().format('YYYY-MM-DD')}
             />
             <input type="time" ref={timeRef} />
             <button

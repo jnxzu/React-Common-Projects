@@ -8,6 +8,7 @@ import Weather from './Weather/Weather';
 import Notes from './Notes/Notes';
 import Quiz from './Quiz/Quiz';
 import Countdown from './Countdown/Countdown';
+import Recipes from './Recipes/Recipes';
 
 import './App.scss';
 
@@ -23,6 +24,7 @@ function App() {
             <Notes />
             <Quiz />
             <Countdown />
+            <Recipes />
           </Route>
           <Route path="*">
             <NotFound />

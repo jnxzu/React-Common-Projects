@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+$bg: #fafafa;
+$card: #d4e2a7;
+$darker: #3f4436;
+
+.recipes {
+  font-family: 'Yusei Magic', sans-serif;
+  background: $bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.recipe {
+  height: 300px;
+  width: 300px;
+  background: $darker;
+  color: $card;
+  border-radius: 15px;
+  box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+  display: flex;
+  text-decoration: none;
+
+  & ~ & {
+    margin-left: -200px;
+  }
+
+  &:hover + & {
+    margin: 0 25px -25px 25px;
+  }
+
+  &__name {
+    width: 50px;
+    overflow: hidden;
+
+    h1 {
+      transform: rotate(-90deg) translateX(-40%) translateY(-250%);
+      height: 50px;
+      width: 300px;
+      font-size: x-large;
+      padding: 0 20px;
+      line-height: 50px;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__image {
+    width: 250px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    flex-grow: 1;
+    overflow: hidden;
+
+    img {
+      width: 250px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}
