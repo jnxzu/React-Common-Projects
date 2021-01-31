@@ -10,6 +10,7 @@ import Quiz from './Quiz/Quiz';
 import Countdown from './Countdown/Countdown';
 import Recipes from './Recipes/Recipes';
 import Passwords from './Passwords/Passwords';
+import Movies from './Movies/Movies';
 
 import './App.scss';
 
@@ -27,6 +28,7 @@ function App() {
             <Countdown />
             <Recipes />
             <Passwords />
+            <Movies />
           </Route>
           <Route path="*">
             <NotFound />
