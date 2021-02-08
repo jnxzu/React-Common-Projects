@@ -1,88 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Andika&display=swap');
 
-$bg: #fafafa;
-$card: #d4e2a7;
-$darker: #3f4436;
+$main: #9ad3bc;
+$secondary: #f3eac2;
+$accent1: #f5b461;
+$accent2: #ec524b;
 
 .recipes {
-  font-family: 'Yusei Magic', sans-serif;
-  background: $bg;
+  font-family: 'Andika', sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden;
-
-  &__container {
-    display: flex;
-    justify-content: center;
-  }
+  height: 100vh;
+  padding-top: 64px;
 }
 
 .recipe {
-  height: 300px;
-  width: 300px;
-  background: linear-gradient(0deg, $darker 0%, $card 33%);
-  color: black;
-  border-radius: 15px;
-  box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: calc(10vh - 6px);
+  transition: 0.25s all ease-in;
   cursor: pointer;
-  transition: all 0.25s ease-out;
+  background: $secondary;
+  border: 1px solid $accent1;
   display: flex;
-  text-decoration: none;
-  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  & ~ & {
-    margin-left: -200px;
+  h1 {
+    font-family: 'Amatic SC', cursive;
+    color: $accent2;
+  }
+
+  > div {
+    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    ul {
+      list-style: none;
+
+      li {
+        width: 200px;
+        font-size: small;
+
+        &::before {
+          content: '\2022';
+          color: $accent2;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+
+    p {
+      padding: 25px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    img {
+      max-height: 100%;
+      width: 250px;
+      border: 5px solid $accent1;
+    }
   }
 
   &:hover {
-    width: 500px;
-    transform: translateY(-10%);
+    height: 50vh;
+    background: $main;
 
-    .recipe__name {
-      width: auto;
-      max-width: 150px;
-    }
-
-    .recipe__image {
-      flex-grow: 1;
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  &:hover + & {
-    margin: 0 25px;
-  }
-
-  &__name {
-    width: 50px;
-    overflow: hidden;
-
-    h1 {
-      transform: rotate(-90deg) translateX(-40%) translateY(-250%);
-      height: 50px;
-      width: 300px;
-      font-size: x-large;
-      padding: 0 20px;
-      line-height: 50px;
-      text-overflow: ellipsis;
-    }
-  }
-
-  &__image {
-    width: 250px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    flex-grow: 1;
-    overflow: hidden;
-
-    img {
-      width: 250px;
-      height: 300px;
-      object-fit: cover;
+    > div {
+      display: flex;
+      opacity: 100%;
+      height: 35vh;
     }
   }
 }
