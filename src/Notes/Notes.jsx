@@ -47,7 +47,7 @@ function Notes() {
   return (
     <div id="notes" className="notes">
       <div className="notes__new" onClick={newNote}>
-        new
+        NEW
       </div>
       <div className="notes__container">
         {notes.map((note) => (
