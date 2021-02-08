@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-expressions */
+import { set } from 'lodash';
 import moment from 'moment';
 import React, { useState, useEffect, useRef } from 'react';
 
@@ -28,6 +29,7 @@ function Countdown() {
           minutes,
           seconds,
         });
+        setShowCountdown(true);
       } else {
         setTargetDate(null);
         setShowCountdown(false);
@@ -69,12 +71,12 @@ function Countdown() {
             <button
               type="submit"
               onClick={() => {
-                setTargetDate(
-                  moment(`${dateRef.current.value} ${timeRef.current.value}`)
-                );
                 setButtonText('one second...');
                 setTimeout(() => {
-                  setShowCountdown(true);
+                  setTargetDate(
+                    moment(`${dateRef.current.value} ${timeRef.current.value}`)
+                  );
+                  setButtonText('ok');
                 }, 1250);
               }}
             >

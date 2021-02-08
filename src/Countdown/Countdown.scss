@@ -74,6 +74,10 @@ $accent: #ee6d6d;
         &:hover {
           padding: 0 15px;
         }
+
+        &:disabled {
+          background: gray;
+        }
       }
     }
   }

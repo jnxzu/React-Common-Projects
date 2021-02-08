@@ -38,7 +38,6 @@ $accent2: #ec524b;
     overflow: hidden;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
 
     ul {
       list-style: none;
@@ -76,8 +75,9 @@ $accent2: #ec524b;
     background: $main;
 
     > div {
-      opacity: 100%;
+      opacity: 1;
       height: 35vh;
+      padding: 2rem;
     }
   }
 }

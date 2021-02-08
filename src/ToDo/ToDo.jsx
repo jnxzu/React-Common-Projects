@@ -12,7 +12,8 @@ function ToDo() {
   ]);
   const { register, handleSubmit } = useForm();
 
-  const add = (data) => {
+  const add = (data, e) => {
+    e.target.reset();
     if (todos.length < 8) {
       setTodos([
         ...todos,

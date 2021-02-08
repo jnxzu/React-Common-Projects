@@ -27,7 +27,7 @@ function Notes() {
   };
 
   const newNote = () => {
-    if (notes.length < 7) {
+    if (notes.length < 6) {
       setNotes([
         ...notes,
         { id: idCount, date: new Date(), content: '', editing: true },

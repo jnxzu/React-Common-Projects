@@ -25,7 +25,7 @@ function Drawing() {
       </div>
       <div className="drawing__controls">
         <div className="drawing__controls__group">
-          <button type="button" onClick={() => setPickColor(true)}>
+          <button type="button" onClick={() => setPickColor(!pickColor)}>
             Color
           </button>
           {pickColor && (
@@ -33,7 +33,6 @@ function Drawing() {
               color={color}
               onChangeComplete={(newColor) => {
                 setColor(newColor.hex);
-                setPickColor(false);
               }}
             />
           )}
