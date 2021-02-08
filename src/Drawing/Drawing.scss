@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
+.drawing {
+  font-family: 'Caveat', cursive;
+  background: linear-gradient(
+    -45deg,
+    #cfd4c5,
+    #eecfd4,
+    #efb9cb,
+    #e6adec,
+    #c287e8
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .sketch-picker {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+  }
+
+  &__canvas {
+    box-shadow: 0 12px 13px rgba(0, 0, 0, 0.16), 0 12px 13px rgba(0, 0, 0, 0.16);
+    margin: 25px;
+    width: 600px;
+    height: 600px;
+    background: #fff;
+  }
+
+  &__controls {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+
+    &__group {
+      button {
+        margin-left: 5px;
+        height: 40px;
+        border: 1px solid black;
+        background: none;
+        color: black;
+        font-weight: 700;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0.375rem 0.75rem;
+        border-radius: 0.25rem;
+        width: fit-content;
+        cursor: pointer;
+        transition: 0.25s all ease-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

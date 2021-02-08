@@ -12,6 +12,7 @@ import Recipes from './Recipes/Recipes';
 import Passwords from './Passwords/Passwords';
 import Movies from './Movies/Movies';
 import Github from './Github/Github';
+import Drawing from './Drawing/Drawing';
 
 import './App.scss';
 
@@ -31,6 +32,7 @@ function App() {
             <Passwords />
             <Movies />
             <Github />
+            <Drawing />
           </Route>
           <Route path="*">
             <NotFound />
