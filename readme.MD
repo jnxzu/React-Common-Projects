@@ -13,7 +13,7 @@ Idea from [Florin Pop](https://www.youtube.com/watch?v=dtKciwk_si4)
 - [x] Github Profiles
 - [x] Drawing
 
- ![](https://imgur.com/lx2uYBb)
- ![](https://imgur.com/UvY7ixl)
- ![](https://imgur.com/rFjOViN)
- ![](https://imgur.com/bwzVdJq)
+![](https://i.imgur.com/lx2uYBb.png)
+![](https://i.imgur.com/bwzVdJq.png)
+![](https://i.imgur.com/UvY7ixl.png)
+![](https://i.imgur.com/rFjOViN.png)
